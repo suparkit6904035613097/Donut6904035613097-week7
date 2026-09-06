@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>สั่งซื้อ SonicClean — แปรงสีฟันไฟฟ้าโซนิค</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;600;700&family=Sarabun:wght@400;500;600&display=swap" rel="stylesheet">
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#0F2E2B',
+          brand: { DEFAULT: '#1F7A6C', light: '#E8F3F0', dark: '#153F38' },
+          coral: '#FF6F4E',
+          sand: '#F7F9F8'
+        },
+        fontFamily: {
+          display: ['Prompt', 'sans-serif'],
+          body: ['Sarabun', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+<style>
+  body { font-family: 'Sarabun', sans-serif; }
+  h1, h2, h3, .font-display { font-family: 'Prompt', sans-serif; }
+</style>
+</head>
+<body class="bg-sand text-ink antialiased min-h-screen">
+
+  <header class="sticky top-0 z-50 bg-sand/90 backdrop-blur border-b border-ink/10">
+    <div class="max-w-3xl mx-auto px-5 sm:px-8 h-16 flex items-center">
+      <a href="index.html" class="inline-flex items-center gap-2 text-sm text-ink/70 hover:text-ink transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        กลับหน้าสินค้า
+      </a>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-5 sm:px-8 py-10 sm:py-14">
+    <h1 class="font-display font-700 text-2xl sm:text-3xl mb-8">ยืนยันคำสั่งซื้อของคุณ</h1>
+
+    <div class="grid md:grid-cols-5 gap-8">
+      <!-- Order summary -->
+      <div class="md:col-span-2 order-2 md:order-1">
+        <div class="bg-white rounded-2xl border border-ink/10 p-6 sticky top-24">
+          <h2 class="font-display font-600 text-base mb-4">สรุปรายการสั่งซื้อ</h2>
+          <div class="flex gap-3 pb-4 border-b border-ink/10">
+            <img src="https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=200&q=80"
+                 alt="SonicClean" class="w-16 h-16 object-cover rounded-xl flex-shrink-0">
+            <div>
+              <p class="font-medium text-sm">แปรงสีฟันไฟฟ้าโซนิค SonicClean</p>
+              <p class="text-ink/50 text-xs mt-1">จำนวน 1 ชิ้น</p>
+            </div>
+          </div>
+          <div class="py-4 space-y-2 text-sm border-b border-ink/10">
+            <div class="flex justify-between text-ink/60">
+              <span>ราคาปกติ</span>
+              <span class="line-through">1,290 ฿</span>
+            </div>
+            <div class="flex justify-between text-ink/60">
+              <span>ค่าจัดส่ง</span>
+              <span class="text-brand">ฟรี</span>
+            </div>
+          </div>
+          <div class="flex justify-between items-center pt-4">
+            <span class="font-display font-600">ยอดชำระทั้งหมด</span>
+            <span class="font-display font-700 text-2xl text-coral">590 ฿</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="md:col-span-3 order-1 md:order-2">
+        <form id="orderForm" class="bg-white rounded-2xl border border-ink/10 p-6 sm:p-7 space-y-5">
+          <div>
+            <label for="fullname" class="block text-sm font-medium mb-1.5">ชื่อ-นามสกุล</label>
+            <input required type="text" id="fullname" name="fullname" placeholder="เช่น สมชาย ใจดี"
+                   class="w-full rounded-xl border border-ink/15 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand/40 focus:border-brand">
+          </div>
+          <div>
+            <label for="phone" class="block text-sm font-medium mb-1.5">เบอร์โทรศัพท์</label>
+            <input required type="tel" id="phone" name="phone" placeholder="08X-XXX-XXXX" pattern="[0-9]{9,10}"
+                   class="w-full rounded-xl border border-ink/15 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand/40 focus:border-brand">
+          </div>
+          <div>
+            <label for="address" class="block text-sm font-medium mb-1.5">ที่อยู่จัดส่ง</label>
+            <textarea required id="address" name="address" rows="4" placeholder="บ้านเลขที่ ถนน ตำบล/แขวง อำเภอ/เขต จังหวัด รหัสไปรษณีย์"
+                      class="w-full rounded-xl border border-ink/15 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand/40 focus:border-brand resize-none"></textarea>
+          </div>
+
+          <button type="submit" id="submitBtn"
+                  class="w-full bg-coral hover:bg-orange-600 text-white font-display font-600 text-base py-4 rounded-full transition-colors disabled:opacity-60 disabled:cursor-not-allowed">
+            ยืนยันการสั่งซื้อ
+          </button>
+
+          <p id="formMsg" class="text-sm text-center hidden"></p>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // TODO: ใส่ URL ของ Google Apps Script Web App ที่ deploy แล้วตรงนี้
+    const scriptURL = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_URL_HERE";
+
+    const form = document.getElementById('orderForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const formMsg = document.getElementById('formMsg');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const orderData = {
+        product: "แปรงสีฟันไฟฟ้าโซนิค SonicClean",
+        price: 590,
+        fullname: document.getElementById('fullname').value.trim(),
+        phone: document.getElementById('phone').value.trim(),
+        address: document.getElementById('address').value.trim(),
+        timestamp: new Date().toISOString()
+      };
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = "กำลังส่งคำสั่งซื้อ...";
+      formMsg.classList.add('hidden');
+
+      fetch(scriptURL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(orderData)
+      })
+        .then(function (res) { return res.json(); })
+        .then(function () {
+          formMsg.textContent = "สั่งซื้อสำเร็จ! ทีมงานจะติดต่อกลับเพื่อยืนยันการจัดส่งเร็วๆ นี้";
+          formMsg.className = "text-sm text-center text-brand font-medium";
+          formMsg.classList.remove('hidden');
+          form.reset();
+        })
+        .catch(function (err) {
+          console.error(err);
+          formMsg.textContent = "เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง";
+          formMsg.className = "text-sm text-center text-red-500 font-medium";
+          formMsg.classList.remove('hidden');
+        })
+        .finally(function () {
+          submitBtn.disabled = false;
+          submitBtn.textContent = "ยืนยันการสั่งซื้อ";
+        });
+    });
+  </script>
+
+</body>
+</html>
