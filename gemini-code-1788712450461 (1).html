@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SonicClean - แปรงสีฟันไฟฟ้าโซนิคเพื่อรอยยิ้มมั่นใจ</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Prompt -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Prompt', sans-serif; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 text-xl font-bold text-sky-600 tracking-tight">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+        </svg>
+        <span>SonicClean</span>
+      </a>
+      <nav class="flex items-center gap-3 sm:gap-4">
+        <a href="admin.html" class="text-sm font-medium text-slate-500 hover:text-slate-800 transition-colors">
+          ระบบแอดมิน
+        </a>
+        <a href="buy.html" class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-sky-600 rounded-full hover:bg-sky-700 shadow-sm transition-all">
+          สั่งซื้อทันที
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-12 pb-16 sm:py-24">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="space-y-6 text-center lg:text-left">
+        <div class="inline-block px-3 py-1 text-xs font-semibold tracking-wide text-sky-700 bg-sky-100 rounded-full">
+          ✨ โปรโมชั่นพิเศษ ส่งฟรีทั่วไทย
+        </div>
+        <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 leading-tight">
+          สัมผัสความสะอาดระดับคลินิก<br>
+          <span class="text-sky-600">ด้วยพลังโซนิคอัจฉริยะ</span>
+        </h1>
+        <p class="text-base sm:text-lg text-slate-600 font-light">
+          แปรงสีฟันไฟฟ้า SonicClean ขจัดคราบพลัคหมดจดอย่างอ่อนโยน เปลี่ยนการดูแลช่องปากในทุกวันให้เป็นเรื่องง่ายและมีประสิทธิภาพ
+        </p>
+
+        <!-- กล่องราคา -->
+        <div class="p-4 bg-white border border-slate-200/80 rounded-2xl shadow-sm inline-flex items-baseline gap-3">
+          <span class="text-3xl sm:text-4xl font-bold text-sky-600">฿590</span>
+          <span class="text-sm sm:text-base text-slate-400 line-through">฿1,290</span>
+          <span class="text-xs font-medium text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md">ประหยัด 54%</span>
+        </div>
+
+        <div>
+          <a href="buy.html" class="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-8 py-4 text-base font-semibold text-white bg-sky-600 rounded-xl hover:bg-sky-700 shadow-lg shadow-sky-600/20 hover:shadow-none transition-all">
+            สั่งซื้อทันที - รับสิทธิ์ราคาโปรโมชั่น
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- ภาพสินค้า -->
+      <div class="relative mx-auto w-full max-w-md lg:max-w-none">
+        <div class="relative overflow-hidden rounded-3xl bg-white p-3 shadow-xl border border-slate-100">
+          <img 
+            src="https://images.unsplash.com/photo-1559591937-e10b1dd186c3?auto=format&fit=crop&w=800&q=80" 
+            alt="SonicClean แปรงสีฟันไฟฟ้าโซนิค" 
+            class="w-full h-80 sm:h-[420px] object-cover rounded-2xl"
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="bg-white border-t border-slate-100 py-16 sm:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">ทำไมต้องเลือก SonicClean?</h2>
+        <p class="text-slate-500 mt-2 text-sm sm:text-base">เทคโนโลยีดูแลฟันที่ออกแบบมาเพื่อความสบายและสุขภาพเหงือกที่ดีที่สุด</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+        <!-- จุดเด่น 1 -->
+        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-sky-200 transition-colors">
+          <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-sky-100 text-sky-600 mb-5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-slate-900 mb-2">สั่นสะเทือนโซนิค 40,000 ครั้ง/นาที</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            พลังคลื่นโซนิคสร้างฟองไมโครบับเบิลซอกซอนเข้าทำความสะอาดร่องฟันได้อย่างล้ำลึกกว่าแปรงทั่วไป
+          </p>
+        </div>
+
+        <!-- จุดเด่น 2 -->
+        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-sky-200 transition-colors">
+          <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-sky-100 text-sky-600 mb-5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-slate-900 mb-2">แบตอึด 30 วัน & กันน้ำ IPX7</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            ชาร์จเพียงครั้งเดียวใช้งานได้ยาวนานถึง 1 เดือน พกพาสะดวก พร้อมมาตรฐานกันน้ำล้างทำความสะอาดได้ไร้กังวล
+          </p>
+        </div>
+
+        <!-- จุดเด่น 3 -->
+        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-sky-200 transition-colors">
+          <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-sky-100 text-sky-600 mb-5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-slate-900 mb-2">ขนนุ่มพิเศษ ถนอมเหงือก</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            ขนแปรงปลายมนพิเศษ ลดการระคายเคือง ด้ามจับเพรียวบางน้ำหนักเบา ออกแบบตามหลักสรีรศาสตร์ จับถนัดกระชับมือ
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 border-t border-slate-200 text-center text-xs text-slate-400">
+    <p>© 2026 SonicClean. All rights reserved.</p>
+  </footer>
+
+  <!-- เรียกใช้ไฟล์ JS ส่วนกลาง -->
+  <script src="script.js"></script>
+</body>
+</html>
