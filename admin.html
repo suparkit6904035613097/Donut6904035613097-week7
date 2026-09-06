@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - SonicClean</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Prompt -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Prompt', sans-serif; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen">
+
+  <!-- Admin Navbar -->
+  <header class="bg-white border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-slate-900 tracking-tight text-lg">SonicClean</span>
+        <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded font-medium">Dashboard</span>
+      </div>
+      <a href="index.html" class="text-sm font-medium text-slate-500 hover:text-sky-600">
+        ดูหน้าเว็บร้านค้า →
+      </a>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-8">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+      <div>
+        <h1 class="text-xl sm:text-2xl font-bold text-slate-900">รายการสั่งซื้อสินค้า (Admin Dashboard)</h1>
+        <p class="text-sm text-slate-500">ตรวจสอบและจัดการข้อมูลคำสั่งซื้อแบบเรียลไทม์จาก Google Sheet</p>
+      </div>
+      <button 
+        id="refreshBtn" 
+        class="inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-slate-700 bg-white border border-slate-200 rounded-xl hover:bg-slate-50 shadow-sm transition-all"
+      >
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+        </svg>
+        รีเฟรชข้อมูล
+      </button>
+    </div>
+
+    <!-- กล่องตารางแสดงข้อมูล -->
+    <div class="bg-white border border-slate-200/80 rounded-2xl shadow-sm overflow-hidden">
+      <div class="overflow-x-auto">
+        <table id="ordersTable" class="w-full text-left border-collapse text-sm">
+          <thead>
+            <tr class="bg-slate-50/80 border-b border-slate-100 text-slate-600 font-medium">
+              <th class="py-3.5 px-4">วัน-เวลา</th>
+              <th class="py-3.5 px-4">ชื่อ - นามสกุล</th>
+              <th class="py-3.5 px-4">เบอร์โทรศัพท์</th>
+              <th class="py-3.5 px-4">ที่อยู่จัดส่ง</th>
+              <th class="py-3.5 px-4 text-right">ยอดชำระ</th>
+            </tr>
+          </thead>
+          <tbody id="ordersTableBody" class="divide-y divide-slate-100">
+            <tr>
+              <td colspan="5" class="py-12 text-center text-slate-400">
+                <div class="inline-block animate-spin rounded-full h-6 w-6 border-b-2 border-sky-600 mb-2"></div>
+                <p>กำลังโหลดข้อมูลคำสั่งซื้อ...</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <!-- เรียกใช้ไฟล์ JS ส่วนกลาง -->
+  <script src="script.js"></script>
+</body>
+</html>
